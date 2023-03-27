@@ -1,7 +1,20 @@
 
 .custom-button{
-  height: 40px;
+  height: 45px;
   border-radius: 5px;
   width: 100%;
   max-width: 400px;
+  cursor: pointer;
+}
+
+.primary-button{
+  background: linear-gradient(90deg, rgb(0, 64, 49) 0%, rgb(0, 121, 87) 100%);
+  color: white;
+  font-size: 18px;
+}
+
+.primary-button:hover{
+  color: #007957 !important;
+  border-color: #007957;
+  background: white !important;
 }

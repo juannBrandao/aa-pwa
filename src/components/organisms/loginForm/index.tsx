@@ -12,10 +12,10 @@ const LoginForm = () => {
     <div className='container'>
       <form>
         <div className='mb-16'>
-          <Input label="E-mail" id="userMail" onKeyDown={(value: string) => setUserMail(value)}/>
+          <Input type='text' label="E-mail" id="userMail" onKeyDown={(value: string) => setUserMail(value)}/>
         </div>
         <div className='mb-16'>
-          <Input label="Senha" id="password" onKeyDown={(value: string) => setPassword(value)}/>
+          <Input type='password' label="Senha" id="password" onKeyDown={(value: string) => setPassword(value)}/>
         </div>
       </form>
       <div>
