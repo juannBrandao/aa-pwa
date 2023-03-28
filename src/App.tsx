@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-import './App.css';
-import Select from 'react-select'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginForm from "./components/organisms/loginForm";
+
+import PageConfig from "./pages/Config";
 
 
 function App() {
-  const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-  ]
-
   return(
-      <div className='App'>
-        <Select name='teste' options={options} />
-
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/"  element={<PageConfig />}/>
+        <Route path="login" element={<LoginForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
