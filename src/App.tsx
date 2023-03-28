@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Select from 'react-select';
 import './App.css';
-import Select from 'react-select'
 
 
 function App() {

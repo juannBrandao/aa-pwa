@@ -10,7 +10,9 @@ export type ButtonProps = {
 const Button = (props: ButtonProps) => {
   return (
     <div>
-      <button className='custom-button primary-button' onClick={() => props.onClick()}>{props.label}</button>
+      {((props.type === 'primary' || !props.type) && (
+        <button className='custom-button primary-button' onClick={() => props.onClick()}>{props.label}</button>
+      ))}
     </div>
   );
   }

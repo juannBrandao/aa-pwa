@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import ErrorMessage from "../atoms/errorMessage";
+
 import "./index.css";
 
 export type InputProps = {
   type: "text" | "password";
   label: string;
   id: string;
-  onKeyDown: (event: string) => void;
+  onKeyDown?: (event: string) => void;
+  register?: any;
+  error?: any;
 };
 
 const Input = (props: InputProps) => {
@@ -28,7 +32,7 @@ const Input = (props: InputProps) => {
             className="custom-input"
             type="text"
             id={props.id}
-            onKeyDown={(event: any) => props.onKeyDown(event.target.value)}
+            {...props.register}
           />
         )}
         {(props.type === "password" || !props.type) && (
@@ -37,12 +41,15 @@ const Input = (props: InputProps) => {
               className="custom-input"
               type={showPassword ? "text" : "password"}
               id={props.id}
-              onKeyDown={(event: any) => props.onKeyDown(event.target.value)}
+              {...props.register}
             />
             {!showPassword && <FaEyeSlash className="icon-password"  onClick={(event) => handleShowPassword(event)}/>}
             {!!showPassword && <FaEye className="icon-password" onClick={(event) => handleShowPassword(event)}/>}
           </div>
         )}
+        {(!!props?.error && (
+           <ErrorMessage text={props.error}/>
+        ))}
       </div>
     </div>
   );

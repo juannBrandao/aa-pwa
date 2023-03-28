@@ -11,10 +11,11 @@
   background: linear-gradient(90deg, rgb(0, 64, 49) 0%, rgb(0, 121, 87) 100%);
   color: white;
   font-size: 18px;
+  border: none;
 }
 
 .primary-button:hover{
   color: #007957 !important;
-  border-color: #007957;
+  border: 1px solid #007957 !important;
   background: white !important;
 }
