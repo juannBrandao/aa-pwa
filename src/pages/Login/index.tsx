@@ -7,7 +7,6 @@ const PageLogin= ()=>{
 
     return(
         <div className="container">
-
           <Card title='Entrar'>
             <LoginForm />
           </Card>

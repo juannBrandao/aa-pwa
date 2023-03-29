@@ -14,7 +14,7 @@ const Card= (props: PropsWithChildren<CardProps>)=>{
                 <div className='head'>
                     <h1>{props.title}</h1>
                 </div>
-                <div className='content'>
+                <div>
                     {props.children}
                 </div>
                 <div className='foother'></div>  

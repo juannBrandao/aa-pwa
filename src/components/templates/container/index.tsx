@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-const MainTemplate = ({ children }:any) => {
+const Container = ({ children }:any) => {
   return (
     <div className='container'>
       {children}
@@ -9,4 +9,4 @@ const MainTemplate = ({ children }:any) => {
   );
   }
   
-export default MainTemplate;
+export default Container;
