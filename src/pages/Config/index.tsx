@@ -1,16 +1,16 @@
-import Select from 'react-select'
+
+import Card from '../../components/molecules/Card';
+import ServerForm from '../../components/organisms/ServerForm';
 import './index.css';
 
 const PageConfig= ()=>{
 
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-      ]
     return(
         <div className="container">
-          <Select name='teste' options={options} />
+
+          <Card title='Informe o servidor'>
+            <ServerForm />
+          </Card>
         </div>
     )
 }

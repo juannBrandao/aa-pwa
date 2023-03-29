@@ -1,0 +1,15 @@
+.card{
+    width: 255px;
+    border-radius: 0.475rem;
+    padding:  2.5rem;
+    box-shadow: 0 .1rem 1rem .25rem rgba(0,0,0,.05);
+    margin-left: auto;
+    margin-right: auto;
+}
+.card .head{
+    text-align: center!important;
+    margin-bottom: 2.75rem!important;
+}
+.card .head h1{
+    font-size: calc(1.3rem + .6vw);
+}
