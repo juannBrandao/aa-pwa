@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
 
-const Container = (props: any) => {
+const MainTemplate = ({ children }:any) => {
   return (
-    <div>
-      {props}
+    <div className='container'>
+      {children}
     </div>
   );
   }
   
-export default Container;
+export default MainTemplate;

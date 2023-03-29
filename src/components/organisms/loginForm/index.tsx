@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Button from '../../atoms/button/button';
-import ErrorMessage from '../../atoms/errorMessage';
 import Input from '../../molecules';
+import Container from '../../templates/container';
 import './index.css';
 
 
@@ -15,7 +15,7 @@ const LoginForm = () => {
   }
   
   return (
-    <div className=''>
+    <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-16 d-flex justify-content-center'>
           <Input register={register('userMail', {required: true, pattern: emailValidationPattern})} 
@@ -30,7 +30,7 @@ const LoginForm = () => {
           <Button label='Entrar' onClick={() => null}/>
         </div>
       </form>
-    </div>
+    </Container>
   );
   }
   
